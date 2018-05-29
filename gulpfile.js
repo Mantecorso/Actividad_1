@@ -6,23 +6,24 @@ cleancss = require('gulp-clean-css'),
 rename = require('gulp-rename');
 
 gulp.task('scripts', ()=> {
-    return gulp.src('js/**/*.js')
+    return gulp.src('public/javascripts/**/*.js')
     .pipe(concat('script.js'))
-    .pipe(gulp.dest('dist/script'))
+    .pipe(gulp.dest('public/dist/script'))
     .pipe(rename('script.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('dist/script'));
+    .pipe(gulp.dest('public/dist/script'));
 })
 
 gulp.task('another', ()=> {
-    return gulp.src('css/**/*.css')
-    .pipe(concat('script.css'))
-    .pipe(rename('script.min.css'))
+    return gulp.src('/public/stylesheets/**/*.css')
+    .pipe(concat('estilos.css'))
+    .pipe(gulp.dest('public/dist/css'))
+    .pipe(rename('estilos.min.css'))
     .pipe(uglify())
-    .pipe(gulp.dest('css/app.css'));
+    .pipe(gulp.dest('public/dist/css'));
 })
 
-gulp.task('default', ['browser', 'scripts']);
+gulp.task('default', ['another', 'scripts']);
 gulp.task('browser', ()=> {
     browserSync.init({
         server: {
@@ -40,22 +41,22 @@ gulp.task('browser', ()=> {
 //    .pipe(gulp.dest('js/app.min.js'))
 //});
 
-gulp.watch('./css/**/*.css').on('change',
-()=>{  return gulp.src('css/**/*.css')
- .pipe(concat('script.css'))
- .pipe(gulp.dest('dist/script'))
- .pipe(rename('script.min.css'))
+gulp.watch('/public/stylesheets/**/*.css').on('change',
+()=>{  return gulp.src('public/stylesheets/*.css')
+ .pipe(concat('estilos.css'))
+ .pipe(gulp.dest('/public/dist/css'))
+ .pipe(rename('estilos.min.css'))
  .pipe(uglify())
- .pipe(gulp.dest('dist/script'));}
+ .pipe(gulp.dest('/public/dist/css'));}
 );
 
-gulp.watch('./js/**/*.js').on('change',
-()=>{  return gulp.src('js/**/*.js')
+gulp.watch('/public/javascripts/**/*.js').on('change',
+()=>{  return gulp.src('/public/javascripts/*.js')
  .pipe(concat('script.js'))
- .pipe(gulp.dest('dist/script'))
+ .pipe(gulp.dest('/public/dist/script'))
  .pipe(rename('script.min.js'))
  .pipe(uglify())
- .pipe(gulp.dest('dist/script'));}
+ .pipe(gulp.dest('/public/dist/script'));}
 );
 
 gulp.watch('index.html').on('change', ()=>{

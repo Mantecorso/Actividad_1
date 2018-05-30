@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const hbs = require('hbs');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -12,6 +13,9 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+//view engine partials//
+hbs.registerPartials(`${__dirname}/views/partials`);
+//donde estan los partials para que los concatene todos y los ponga juntos en public/dist//
 
 app.use(logger('dev'));
 app.use(express.json());

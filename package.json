@@ -5,7 +5,7 @@
   "scripts": {
     "start": "nodemon ./bin/www",
     "start-backend": "nodemon ./bin/www",
-    "start-frontend": "nodemon ./bin/www"
+    "start-frontend": "gulp"
   },
   "dependencies": {
     "browser-sync": "^2.24.4",

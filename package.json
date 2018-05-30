@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www",
+    "start": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
     "start-backend": "nodemon ./bin/www",
     "start-frontend": "gulp"
   },
@@ -21,7 +21,8 @@
     "hbs": "~4.0.1",
     "http-errors": "~1.6.2",
     "morgan": "~1.9.0",
-    "nodemon": "^1.17.5"
+    "nodemon": "^1.17.5",
+    "serve-favicon": "~2.4.5"
   },
   "description": "agencia de viajes",
   "main": "app.js",

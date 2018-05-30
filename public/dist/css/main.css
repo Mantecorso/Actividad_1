@@ -1,0 +1,22 @@
+header {
+    background-color: paleturquoise;
+}
+section {
+    background-color: palegreen;
+
+}
+footer {
+    background-color: palevioletred;
+}
+
+body {
+    background-color: plum;
+}
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}

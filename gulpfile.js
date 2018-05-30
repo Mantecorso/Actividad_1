@@ -50,13 +50,13 @@ gulp.watch('./public/stylesheets/**/*.css').on('change',
  .pipe(gulp.dest('./public/dist/css'));}
 );
 
-gulp.watch('/public/javascripts/**/*.js').on('change',
-()=>{  return gulp.src('/public/javascripts/*.js')
+gulp.watch('./public/javascripts/**/*.js').on('change',
+()=>{  return gulp.src('./public/javascripts/*.js')
  .pipe(concat('main.js'))
- .pipe(gulp.dest('/public/dist/javascripts'))
+ .pipe(gulp.dest('./public/dist/javascripts'))
  .pipe(rename('main.min.js'))
  .pipe(uglify())
- .pipe(gulp.dest('/public/dist/javascripts'));}
+ .pipe(gulp.dest('./public/dist/javascripts'));}
 );
 
 //gulp.watch('index.html').on('change', ()=>{

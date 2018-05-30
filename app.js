@@ -17,9 +17,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 //view engine partials//
-hbs.registerPartials(`${__dirname}/views/partials`);
+hbsUtils.registerPartials(`${__dirname}/views/partials`);
 //donde estan los partials para que los concatene todos y los ponga juntos en public/dist//
-hbs.registerWatchedPartials(`${__dirname}/views/partials`);
+hbsUtils.registerWatchedPartials(`${__dirname}/views/partials`);
 //obliga a nodemon a ver los Partials nuevos todo el tiempo//
 
 app.use(logger('dev'));

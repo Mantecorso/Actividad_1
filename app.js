@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const hbs = require('hbs');
 const hbsUtils = require('hbs-utils')(hbs);
+//creacion dos constantes hbs//
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');

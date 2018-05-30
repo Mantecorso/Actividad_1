@@ -1,0 +1,17 @@
+{
+  "name": "actividad-1",
+  "description": "agencia de viajes",
+  "main": "app.js",
+  "authors": [
+    "Mantecorso <luisjuradoquesada@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Mantecorso/Actividad_1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

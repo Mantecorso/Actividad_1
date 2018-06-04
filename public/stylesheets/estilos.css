@@ -1,20 +1,3 @@
-.cabecera {
-    margin-bottom: 10px;
-}
-
-.footer {
-    background-color: rgb(87, 130, 170);
-    padding-top: 40px;
-    margin-top: 10px;
-}
-
-.nav-link {
-    color: white;
-}
-
-.big {
-    width: 300px;
-}
 
 .negro a{
     color: black;
@@ -25,69 +8,13 @@
     font-size: 15px;
 }
 
-h1, h2 {
-    color: white;
-}
-
 a:hover {
     color: greenyellow;
 }
 
-.map {
-    height: 550px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-.gridfooter {
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
-    grid-gap: 10px;
-}
-
-.init1 {
-    padding-top: 25px;
-}
-
-.inicial {
-    padding-right: 11px;
-}
-
-.logos {
-    padding-left: 85px;
-}
-
-.centro {
-    padding-top: 55px;
-}
-
-.logo1 {
-    height: 75px;
-    width: 75px;
-}
-
-.logo2 {
-    height: 25px;
-    width: 25px;
-}
-
-body {
-    color: black;
-    font-size: 55px;
-}
-
-.around {
-    border: 2px solid black;
-}
-
-.container-fluid {
-    padding-top: 10px;
-}
-
-.fin {
-    text-align: center;
-    padding-top: 25px;
-    border-top: 1px solid black;
+body, html {
+    margin: 0;
+    padding: 0;
 }
 
 .card-title {
@@ -105,16 +32,6 @@ body {
 
 .image2 {
     background: url("/images/travel_2.jpg") no-repeat center top;
-    background-position: center center;
-    text-align: center;
-    min-height: 400px;
-    width: 100%;
-    background-size: cover;
-    margin-top: 20px;
-}
-
-.image22 {
-    background: url("/images/nathan-anderson-316188-unsplash.jpg") no-repeat center top;
     background-position: center center;
     text-align: center;
     min-height: 400px;
@@ -197,9 +114,10 @@ body {
 .ofer {
     position: absolute;
     background-color: blue;
+    color: white;
     top: 10px;
     left: 10px;
-    width: 90%;
+    width: 98%;
     height: 35px;
 }
 
@@ -207,7 +125,7 @@ body {
     position: absolute;
     background-color: yellow;
     color: blue;
-    top: 15px;
+    top: 10px;
     right: 10px;
     height: 60px;
 }

@@ -1,0 +1,36 @@
+.fin {
+    text-align: center;
+    padding-top: 25px;
+}
+
+.gridfooter {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+}
+
+.footer {
+    background-color: rgb(87, 130, 170);
+    padding-top: 40px;
+    margin-top: 10px;
+}
+
+.primer {
+    padding-left: 15px;
+}
+
+.nav-link {
+    color: white;
+}
+
+.big {
+    width: 300px;
+}
+
+.black a {
+    color: white;
+    font-size: 15px;
+}
+
+a:hover {
+    color: greenyellow;
+}

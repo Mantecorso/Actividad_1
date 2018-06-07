@@ -3,6 +3,10 @@
     color: black;
 }
 
+.container-fluid {
+    padding-bottom: 25px;
+}
+
 .black a {
     color: white;
     font-size: 15px;
@@ -109,6 +113,7 @@ body, html {
     background-color: paleturquoise;
     margin-top: 80px;
     height: 350px;
+    overflow: hidden;
 }
 
 .ofer {
@@ -131,16 +136,15 @@ body, html {
 }
 
 
-
-
 .fin {
     text-align: center;
     padding-top: 25px;
 }
 
-.gridfooter {
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
+.logos {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .footer {
@@ -155,6 +159,7 @@ body, html {
 
 .nav-link {
     color: white;
+    padding: 10px;
 }
 
 .big {
@@ -174,11 +179,8 @@ a:hover {
     padding-bottom: 30px;
 }
 
-/*.otracab {
-    padding-top: 5px;
-}*/
-
-h1, h2 {
+h1,
+h2 {
     color: white;
 }
 
@@ -211,7 +213,9 @@ a:hover {
     font-size: 15px;
 }
 
-
+#naxvar {
+    background-color: blue;
+}
 body {
   
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;

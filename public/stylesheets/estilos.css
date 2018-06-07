@@ -3,6 +3,10 @@
     color: black;
 }
 
+.container-fluid {
+    padding-bottom: 25px;
+}
+
 .black a {
     color: white;
     font-size: 15px;
@@ -109,6 +113,7 @@ body, html {
     background-color: paleturquoise;
     margin-top: 80px;
     height: 350px;
+    overflow: hidden;
 }
 
 .ofer {
@@ -129,6 +134,4 @@ body, html {
     right: 10px;
     height: 60px;
 }
-
-
 

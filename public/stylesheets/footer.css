@@ -3,9 +3,10 @@
     padding-top: 25px;
 }
 
-.gridfooter {
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
+.logos {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .footer {
@@ -20,6 +21,7 @@
 
 .nav-link {
     color: white;
+    padding: 10px;
 }
 
 .big {

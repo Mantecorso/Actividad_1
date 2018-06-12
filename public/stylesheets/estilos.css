@@ -41,7 +41,7 @@ body, html {
     min-height: 400px;
     width: 100%;
     background-size: cover;
-    margin-top: 20px;
+    
 }
 
 .image3 {
@@ -51,7 +51,7 @@ body, html {
     min-height: 400px;
     width: 100%;
     background-size: cover;
-    margin-top: 20px;
+    
 }
 
 .image4 {
@@ -116,6 +116,16 @@ body, html {
     overflow: hidden;
 }
 
+.amar {
+    height: 50px;
+    background-color: yellow;
+}
+
+.azul {
+    height: 30px;
+    background-color: blue;
+}
+
 .ofer {
     position: absolute;
     background-color: blue;
@@ -135,3 +145,13 @@ body, html {
     height: 60px;
 }
 
+.transparent {
+    background-color: rgba(199, 198, 197, .5);
+    padding: 10px;
+    margin-top: 45px;
+}
+
+.formulario {
+    padding-bottom: 10px;
+    
+}

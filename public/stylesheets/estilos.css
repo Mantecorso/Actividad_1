@@ -3,10 +3,6 @@
     color: black;
 }
 
-.container-fluid {
-    padding-bottom: 25px;
-}
-
 .black a {
     color: white;
     font-size: 15px;
@@ -38,7 +34,7 @@ body, html {
     background: url("/images/travel_2.jpg") no-repeat center top;
     background-position: center center;
     text-align: center;
-    min-height: 400px;
+    min-height: 500px;
     width: 100%;
     background-size: cover;
     
@@ -149,9 +145,25 @@ body, html {
     background-color: rgba(199, 198, 197, .5);
     padding: 10px;
     margin-top: 45px;
+    margin-bottom: 20px;
 }
 
 .formulario {
     padding-bottom: 10px;
     
 }
+
+.error {
+    color: purple;
+    font-size: 25px;
+    text-align: center;
+    background-color: palegreen;
+    height: 50px;
+    width: 250px;
+}
+
+.mapa {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+

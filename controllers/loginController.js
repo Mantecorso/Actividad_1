@@ -29,7 +29,7 @@ class loginController extends Controller
            }
        });
    }  
-   
+
    index()
   {
      let info = this.req.flash('info');

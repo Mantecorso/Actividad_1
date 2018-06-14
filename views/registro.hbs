@@ -3,19 +3,28 @@
     <div class="row">
         <div class="col-12 image2">
             <div class="row">
-                
-                    <div class="col-4"></div>
-                    <div class="col-4 transparent">
-                        <h1>Registro</h1>
-                        <form method="POST" class="formulario">
+
+                <div class="col-4"></div>
+                <div class="col-4 transparent">
+                    <h1>Registro</h1>
+                    <form method="POST" class="formulario needs-validation" novalidate>
+                        <div class="form">
                             <div class="form-group">
                                 <label for="uname">Usuario</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Usuario" name="uname" required>
+                                <input type="text" class="form-control" id="uname" aria-describedby="emailHelp" placeholder="Usuario" name="uname"
+                                    required>
+                                <div class="invalid-feedback">
+                                    No puedes dejarlo vacio. Estupido!.
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" required>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email"
+                                    required>
                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                <div class="invalid-feedback">
+                                    Se te ha olvidado la @. Tonto!.
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="psw">Password</label>
@@ -26,19 +35,22 @@
                                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Repeat Password" name="psw" required>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" required>
-                                <label class="form-check-label" for="defaultCheck1">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                <label class="form-check-label" for="invalidCheck">
                                     Acepto los terminos y condiciones, asi como la politica de privacidad.
                                 </label>
+                                <div class="invalid-feedback">
+                                    Debes de aceptar los terminos y condiciones antes de dar al boton. Gilipollas!.
+                                </div>
                             </div>
                             <p></p>
                             <button type="submit" class="btn btn-warning">ENVIAR</button>
 
+                        </div>
+                    </form>
+                </div>
+                <div class="col-4"></div>
 
-                        </form>
-                    </div>
-                    <div class="col-4"></div>
-                
             </div>
         </div>
     </div>
@@ -50,46 +62,44 @@
     <div class="row">
         <div class="col-12 image2">
             <div class="row">
-                
-                    <div class="col-2"></div>
-                    <div class="col-8 transparent">
-                        <h1>Registro</h1>
-                        <form action="" class="formulario">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Usuario</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Usuario">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Repeat Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Repeat Password">
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                    Acepto los terminos y condiciones, asi como la politica de privacidad.
-                                </label>
-                            </div>
-                            <p></p>
-                            <button type="submit" class="btn btn-warning">ENVIAR</button>
+
+                <div class="col-2"></div>
+                <div class="col-8 transparent">
+                    <h1>Registro</h1>
+                    <form action="" class="formulario">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Usuario</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Usuario">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Repeat Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Repeat Password">
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Acepto los terminos y condiciones, asi como la politica de privacidad.
+                            </label>
+                        </div>
+                        <p></p>
+                        <button type="submit" class="btn btn-warning">ENVIAR</button>
 
 
-                        </form>
-                    </div>
-                   
-                
+                    </form>
+                </div>
+
+
             </div>
         </div>
     </div>
 
 </div>
-
-

@@ -8,6 +8,7 @@ const hbsUtils = require('hbs-utils')(hbs);
 let expressSessions = require('express-session');
 let flash = require('connect-flash');
 //creacion dos constantes hbs//
+const Logger = require('../configuration/winston');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -38,7 +39,9 @@ app.use(expressSessions({
 
 app.use(flash());
 
-app.use(logger('dev'));
+//app.use(logger('dev'));
+app.use(logger('combined', {stream:winston.stream}));
+//usamos a partir de ahora el logger de winston
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());

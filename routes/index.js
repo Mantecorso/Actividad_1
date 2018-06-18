@@ -46,7 +46,14 @@ router.get('/email', (req, res, next) => {
   let message = {
     to: 'luisjuradoquesada@gmail.com',
     subject: 'Email de prueba',
-    html: '<p>Hola es una prueba</p>'
+    html: '<p>Eres muy guapo</p>',
+    attachments:[
+      {
+        filename:'beijing.JPG',
+        path:__dirname + '/../public/images/beijing.JPG',
+        cid:'imagen'
+      }
+    ]
   };
   Email.transporter.sendMail(message, (error, info) => {
     if (error) {

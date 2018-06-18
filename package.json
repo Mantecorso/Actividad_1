@@ -8,6 +8,7 @@
     "start-frontend": "gulp"
   },
   "dependencies": {
+    "app-root-path": "^2.0.1",
     "body-parser": "^1.18.3",
     "browser-sync": "^2.24.4",
     "concurrently": "^3.5.1",
@@ -27,7 +28,8 @@
     "mysql": "^2.15.0",
     "mysql2": "^1.5.3",
     "nodemon": "^1.17.5",
-    "serve-favicon": "~2.4.5"
+    "serve-favicon": "~2.4.5",
+    "winston": "^3.0.0"
   },
   "description": "agencia de viajes",
   "main": "app.js",

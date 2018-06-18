@@ -45,10 +45,10 @@ router.post('/login', (req, res, next) => {
 })
 
 router.get('/email', (req, res, next) => {
-  Email.transporter.use('compile', Hbs ({
+  Email.transporter.use('compile', HbsEmail ({
       viewEngine: 'hbs',
       extName: '.hbs',
-      viewPath: Path.join(__dirname, "../view/emails")
+      viewPath: Path.join(__dirname, "../views/emails")
   }))
   let message = {
     to: 'luisjuradoquesada@gmail.com',

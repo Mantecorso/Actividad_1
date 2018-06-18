@@ -2,6 +2,7 @@
 
 const Controller = require('./controller');
 const UserModel = require('../models/users');
+const Logger = require('../configuration/winston');
 class loginController extends Controller
 {
   constructor(req, res, next)

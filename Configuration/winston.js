@@ -17,7 +17,7 @@ let options = {
    colorize: true,
  },
 };
-let logger = new winston.Logger({
+let logger = winston.createLogger({
  transports: [
    new winston.transports.File(options.file),
    new winston.transports.Console(options.console)

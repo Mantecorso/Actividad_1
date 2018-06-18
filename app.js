@@ -9,6 +9,7 @@ let expressSessions = require('express-session');
 let flash = require('connect-flash');
 //creacion dos constantes hbs//
 const Logger = require('./Configuration/winston');
+const winston = require('winston');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');

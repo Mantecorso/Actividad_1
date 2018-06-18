@@ -6,7 +6,7 @@ class loginController extends Controller
   constructor(req, res, next)
   {
       super(req,res,next);
-      logger.info('iniciado login');
+      Logger.info('iniciado login');
   }
 
    login()

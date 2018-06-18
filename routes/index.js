@@ -3,6 +3,8 @@ var router = express.Router();
 const LoginController = require('../controllers/loginController');
 const RegistroController = require('../controllers/registroController');
 const Email = require('../Configuration/emailconf');
+const Path = require('path');
+const HbsEmail = require('nodemailer-express-handlebars');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -43,10 +45,16 @@ router.post('/login', (req, res, next) => {
 })
 
 router.get('/email', (req, res, next) => {
+  Email.transporter.use('compile', Hbs ({
+      viewEngine: 'hbs',
+      extName: '.hbs',
+      viewPath: Path.join(__dirname, "../view/emails")
+  }))
   let message = {
     to: 'luisjuradoquesada@gmail.com',
     subject: 'Email de prueba',
-    html: '<p>Eres muy guapo</p>',
+    template: 'email',
+    context: {text: 'Enviamos una prueba por handlebars'},
     attachments:[
       {
         filename:'beijing.JPG',

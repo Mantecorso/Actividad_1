@@ -1,14 +1,14 @@
-
-
 const Controller = require('./controller');
 const UserModel = require('../models/users');
-const Logger = require('../configuration/winston');
+const Logger = require('../Configuration/winston');
 class loginController extends Controller
 {
   constructor(req, res, next)
   {
       super(req,res,next);
-  }  
+      logger.info('iniciado login');
+  }
+
    login()
   {
       let username = this.req.body.uname;
@@ -17,6 +17,7 @@ class loginController extends Controller
       userModel.findUser(username,(info)=>{
          console.log("datos recibidos >"+ JSON.stringify(info));
        if (info.length === 0){
+           logger.debug("el usuario no existe");
           this.req.flash('info','El usuario no existe');
           
            this.index();    

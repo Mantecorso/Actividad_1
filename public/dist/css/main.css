@@ -211,7 +211,10 @@ a:hover {
     color: greenyellow;
 }
 
-
+.micifu {
+    text-align: center;
+    background-color: plum;
+}
 
 h1,
 h2 {

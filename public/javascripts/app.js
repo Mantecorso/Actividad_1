@@ -6,9 +6,18 @@
         // Loop over them and prevent submission
         var validation = Array.prototype.filter.call(forms, function (form) {
               form.addEventListener('submit', function (event) {
+                  var pass = $('#psw').val().trim();
+                  var pass2 = $('#pswtwo').val().trim();
+                  console.log(pass)
                   if (form.checkValidity() === false) {
                     event.preventDefault();
                     event.stopPropagation();
+                  }
+                  if (pass !== pass2) {
+                      $('.container').append('<p>Contrasenya repetida</p>');
+                    event.preventDefault();
+                    event.stopPropagation();
+                    return;
                   }
               //    let psw = $('psw').value().trim();
               //    let pswtwo = $('pswtwo').value().trim();

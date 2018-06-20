@@ -15,7 +15,7 @@
                     event.stopPropagation();
                   }
                   if (pass !== pass2) {
-                      $('.container').append('<p>Contrasenya repetida</p>');
+                      $('.form-control').append('<p>Contrasenya repetida</p>');
                       //apend anyade a la clase container la <p>
                     event.preventDefault();
                     event.stopPropagation();
@@ -38,3 +38,6 @@
           false);
         
     })();
+
+
+    

@@ -42,13 +42,14 @@ app.use(expressSessions({
 app.use(flash());
 
 //app.use(logger('dev'));
-app.use(logger('combined', {stream:winston.stream}));
+app.use(Logger('combined', {stream:winston.stream}));
 //usamos a partir de ahora el logger de winston
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('bower_components', express.static(`${__dirname}/public/components`));
+//app.use('bower_components', express.static(`${__dirname}/public/components`));
+app.use('components', express.static(`${__dirname}/public/components`));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

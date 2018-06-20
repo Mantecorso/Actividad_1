@@ -1,4 +1,4 @@
-var createError = require('http-errors');
+//var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
@@ -8,9 +8,9 @@ const hbsUtils = require('hbs-utils')(hbs);
 let expressSessions = require('express-session');
 let flash = require('connect-flash');
 //creacion dos constantes hbs//
-const Logger = require('./Configuration/winston');
-const winston = require('winston');
-const hbsemail = require('nodemailer-express-handlebars');
+//const Logger = require('./Configuration/winston');
+//const winston = require('winston');
+//const hbsemail = require('nodemailer-express-handlebars');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -42,7 +42,7 @@ app.use(expressSessions({
 app.use(flash());
 
 //app.use(logger('dev'));
-app.use(Logger('combined', {stream:winston.stream}));
+app.use(logger('combined', {stream:winston.stream}));
 //usamos a partir de ahora el logger de winston
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

@@ -2,7 +2,7 @@ const Controller = require('./controller');
 const UserModel = require('../models/users');
 const Logger = require('../Configuration/winston');
 const Email = require('../Configuration/emailconf');
-const HbsEmail = require('nodemailer-express-handlebars');
+const HbsEmail = require('../node_modules/nodemailer-express-handlebars/index');
 const Path = require('path');
 class loginController extends Controller {
     constructor(req, res, next) {
@@ -17,7 +17,7 @@ class loginController extends Controller {
         userModel.findUser(username, (info) => {
             console.log("datos recibidos >" + JSON.stringify(info));
             if (info.length === 0) {
-                logger.debug("el usuario no existe");
+                Logger.debug("el usuario no existe");
                 this.req.flash('info', 'El usuario no existe');
 
                 this.index();
@@ -25,7 +25,7 @@ class loginController extends Controller {
                 if (password == info[0].password) {
                     this.res.render('login', {
                         title: 'Login',
-                        layout: 'layoutLogin',
+                        layout: 'login',
                         nombre: info[0].username
                     })
                     this.index();

@@ -2,9 +2,9 @@ var express = require('express');
 var router = express.Router();
 const LoginController = require('../controllers/loginController');
 const RegistroController = require('../controllers/registroController');
-const Email = require('../Configuration/emailconf');
-const Path = require('path');
-const HbsEmail = require('nodemailer-express-handlebars');
+//const Email = require('../Configuration/emailconf');
+//const Path = require('path');
+//const HbsEmail = require('nodemailer-express-handlebars');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {

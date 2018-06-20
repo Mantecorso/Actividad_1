@@ -171,6 +171,10 @@ body, html {
     padding-bottom: 10px;
 }
 
+#bonito {
+    background-color: purple;
+    color: white;
+}
 
 .fin {
     text-align: center;

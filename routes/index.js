@@ -42,36 +42,41 @@ router.post('/login', (req, res, next) => {
   let loginController = new LoginController(req, res, next);
   loginController.login();
 
-})
+});
 
-router.get('/email', (req, res, next) => {
-  Email.transporter.use('compile', HbsEmail ({
-      viewEngine: 'hbs',
-      extName: '.hbs',
-      viewPath: Path.join(__dirname, "../views/emails")
-  }))
-  let message = {
-    to: 'luisjuradoquesada@gmail.com',
-    subject: 'Email de prueba',
-    template: 'email',
-    context: {text: 'Enviamos una prueba por handlebars'},
-    attachments:[
-      {
-        filename:'beijing.JPG',
-        path:__dirname + '/../public/images/beijing.JPG',
-        cid:'imagen'
-      }
-    ]
-  };
-  Email.transporter.sendMail(message, (error, info) => {
-    if (error) {
-      res.status(500).send(error, message);
-      return
-    }
-    Email.transporter.close();
-    res.status(200).send('Respuesta "%s"' + info.response);
-  });
+router.post('/email', (req, res, next)=>{
+  let loginController = new LoginController(req, res, next);
+  loginController.recoverPass();
+});
 
-})
+//router.get('/email', (req, res, next) => {
+//  Email.transporter.use('compile', HbsEmail ({
+//      viewEngine: 'hbs',
+//      extName: '.hbs',
+//      viewPath: Path.join(__dirname, "../views/emails")
+//  }))
+//  let message = {
+//    to: 'luisjuradoquesada@gmail.com',
+//    subject: 'Email de prueba',
+//    template: 'email',
+//    context: {text: 'Enviamos una prueba por handlebars'},
+//    attachments:[
+//      {
+//        filename:'beijing.JPG',
+//        path:__dirname + '/../public/images/beijing.JPG',
+//        cid:'imagen'
+//      }
+//    ]
+//  };
+//  Email.transporter.sendMail(message, (error, info) => {
+//    if (error) {
+//      res.status(500).send(error, message);
+//      return
+//    }
+//    Email.transporter.close();
+//    res.status(200).send('Respuesta "%s"' + info.response);
+//  });
+
+//})
 
 module.exports = router;

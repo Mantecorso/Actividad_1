@@ -7,6 +7,7 @@
         var validation = Array.prototype.filter.call(forms, function (form) {
               form.addEventListener('submit', function (event) {
                   var pass = $('#psw').val().trim();
+                  //para coger un dato igualo la variable con dolar y el name
                   var pass2 = $('#pswtwo').val().trim();
                   console.log(pass)
                   if (form.checkValidity() === false) {
@@ -14,7 +15,8 @@
                     event.stopPropagation();
                   }
                   if (pass !== pass2) {
-                      $('.container').append('<p>Contrasenya repetida</p>');
+                      $('.form-control').append('<p>Contrasenya repetida</p>');
+                      //apend anyade a la clase container la <p>
                     event.preventDefault();
                     event.stopPropagation();
                     return;

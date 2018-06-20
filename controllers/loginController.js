@@ -2,7 +2,7 @@ const Controller = require('./controller');
 const UserModel = require('../models/users');
 const Logger = require('../Configuration/winston');
 const Email = require('../Configuration/emailconf');
-const hbsEmail = require('nodemailer-express-handlebars');
+const HbsEmail = require('nodemailer-express-handlebars');
 const Path = require('path');
 class loginController extends Controller {
     constructor(req, res, next) {

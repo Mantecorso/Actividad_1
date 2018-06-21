@@ -2,14 +2,14 @@
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
-//var logger = require('morgan');
+var logger = require('morgan');
 const hbs = require('hbs');
 const hbsUtils = require('hbs-utils')(hbs);
 let expressSessions = require('express-session');
 let flash = require('connect-flash');
 //creacion dos constantes hbs//
-const logger = require('./Configuration/winston');
 const winston = require('winston');
+const Logger = require('./Configuration/winston');
 //const hbsemail = require('nodemailer-express-handlebars');
 
 var indexRouter = require('./routes/index');
@@ -41,15 +41,15 @@ app.use(expressSessions({
 
 app.use(flash());
 
-//app.use(logger('dev'));
-app.use(logger('combined', {stream:winston.stream}));
+app.use(logger('dev'));
+app.use(Logger('combined', {stream:winston.stream}));
 //usamos a partir de ahora el logger de winston
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-//app.use('bower_components', express.static(`${__dirname}/public/components`));
-app.use('components', express.static(`${__dirname}/public/components`));
+app.use('bower_components', express.static(`${__dirname}/public/components`));
+//app.use('components', express.static(`${__dirname}/public/components`));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

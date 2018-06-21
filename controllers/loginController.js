@@ -2,7 +2,8 @@ const Controller = require('./controller');
 const UserModel = require('../models/users');
 const Logger = require('../Configuration/winston');
 const Email = require('../Configuration/emailconf');
-const HbsEmail = require('../node_modules/nodemailer-express-handlebars/index');
+//const HbsEmail = require('../node_modules/nodemailer-express-handlebars/index');
+const HbsEmail = require('nodemailer-express-handlebars');
 const Path = require('path');
 class loginController extends Controller {
     constructor(req, res, next) {
@@ -78,7 +79,7 @@ class loginController extends Controller {
                 },
 
             };
-            Email.transporter.sendMail(message, (error, info) => {
+            Email.transporter.sendMail(message, (error) => {
                 if (error) {
 
                     res.status(500).send(error, message);

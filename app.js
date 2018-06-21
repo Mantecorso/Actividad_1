@@ -2,13 +2,13 @@
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+//var logger = require('morgan');
 const hbs = require('hbs');
 const hbsUtils = require('hbs-utils')(hbs);
 let expressSessions = require('express-session');
 let flash = require('connect-flash');
 //creacion dos constantes hbs//
-//const Logger = require('./Configuration/winston');
+const logger = require('./Configuration/winston');
 const winston = require('winston');
 //const hbsemail = require('nodemailer-express-handlebars');
 

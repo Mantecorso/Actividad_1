@@ -8,8 +8,8 @@ const hbsUtils = require('hbs-utils')(hbs);
 let expressSessions = require('express-session');
 let flash = require('connect-flash');
 //creacion dos constantes hbs//
-const winston = require('winston');
-const Logger = require('./Configuration/winston');
+//const winston = require('winston');
+var winston = require('./Configuration/winston');
 //const hbsemail = require('nodemailer-express-handlebars');
 
 var indexRouter = require('./routes/index');
@@ -41,8 +41,8 @@ app.use(expressSessions({
 
 app.use(flash());
 
-app.use(logger('dev'));
-app.use(Logger('combined', {stream:winston.stream}));
+//app.use(logger('dev'));
+app.use(logger('combined', {stream:winston.stream}));
 //usamos a partir de ahora el logger de winston
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -58,7 +58,7 @@ app.use('/login', loginRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
  // next(createError(404));
- res.status('error404');
+ res.status(404);
  res.render('error404');
 });
 
